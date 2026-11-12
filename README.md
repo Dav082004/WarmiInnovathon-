@@ -75,10 +75,14 @@ Reglas completas: [CONTRIBUTING.md](CONTRIBUTING.md) para personas y [AGENTS.md]
 | Carpeta o archivo | Para qué |
 | --- | --- |
 | `docs/GUIA-INICIO.md` | Los primeros 15 minutos, paso a paso |
+| `docs/INSTALACION.md` y `setup/instalar.*` | Instalar Git, VS Code, Node, GitHub CLI, OpenCode y Copilot, con scripts para Windows, Mac y Linux |
+| `docs/USAR-SPEC.md` | Cómo escribir y usar la spec, paso a paso |
+| `docs/ISSUES-Y-TABLERO.md` | Issues, etiquetas por área y tablero de GitHub Projects, paso a paso |
+| `docs/EJEMPLO-TAREA.md` | Una tarea de ejemplo dividida por áreas, de la spec a *Hecho* |
 | `docs/FLUJO-SDD.md` | El flujo completo y qué decirle al agente en cada fase |
 | `docs/constitution.md` | Los principios del proyecto |
 | `specs/000-plantilla/` | Plantillas de spec, plan y tareas |
-| `setup/` | Scripts que configuran Git en Windows, Mac y Linux |
+| `setup/` | Scripts para instalar las herramientas, configurar Git y crear las etiquetas |
 | `.github/agents/` y `.opencode/agents/` | Cinco agentes con rol fijo: Especificador, Planificador, Desarrollador, QA y Desplegador |
 | `.agents/skills/` | Doce skills en español para el flujo |
 | `.github/ISSUE_TEMPLATE/` y plantilla de PR | Issues y PRs ordenados |

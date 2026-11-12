@@ -39,7 +39,7 @@ docs/constitution.md → specs/NNN-nombre/spec.md → plan.md → tasks.md → i
 ## Con el MCP de GitHub
 
 - Antes de crear, editar o cerrar algo en GitHub, **di exactamente qué vas a hacer** y espera confirmación.
-- Los issues nuevos van al tablero del equipo en **Por hacer**. Al empezar uno pasa a **En progreso**; con PR abierto, a **En revisión**; fusionado, a **Hecho**.
+- Los issues nuevos van al tablero del equipo en **Por hacer**, con su etiqueta de **área** (`área: diseño`, `área: frontend`, `área: backend-datos`, `área: pruebas`, `área: despliegue` o `área: docs-pitch`). Un issue es de una sola área: si una tarea toca varias, divídela en un sub-issue por área. Al empezar uno pasa a **En progreso**; con PR abierto, a **En revisión**; fusionado, a **Hecho**.
 - Si dos ramas tocan los mismos archivos, avisa del posible conflicto.
 
 ## Código

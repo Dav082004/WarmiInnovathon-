@@ -1,11 +1,22 @@
 # Guía de inicio (15 minutos)
 
-## 1. Prepara tu computadora
+## 1. Instala las herramientas
 
-- [VS Code](https://code.visualstudio.com/) actualizado (1.101 o superior) con las extensiones GitHub Copilot, GitHub Copilot Chat y GitHub Pull Requests. VS Code te las sugiere al abrir este repo.
-- [Git](https://git-scm.com/).
-- Una cuenta de GitHub con sesión iniciada en VS Code. Si eres estudiante, verifica [GitHub Education](https://education.github.com/) para tener Copilot Student; mientras tanto sirve Copilot Free.
-- Respaldo: [OpenCode](https://opencode.ai/), por si se acaban los tokens de Copilot.
+Necesitas Git, VS Code, Node, GitHub CLI, y un agente (GitHub Copilot, con OpenCode de respaldo). Hay un script que lo instala todo:
+
+```bash
+# Mac o Linux
+bash setup/instalar.sh
+```
+
+```powershell
+# Windows (PowerShell)
+powershell -ExecutionPolicy Bypass -File setup\instalar.ps1
+```
+
+Los scripts viven en el repo. Si todavía no tienes Git para clonarlo, en GitHub usa **Code → Download ZIP**, descomprime y corre el script desde esa carpeta.
+
+Qué instala, instalación a mano y cómo resolver problemas: [INSTALACION.md](INSTALACION.md). Si eres estudiante, verifica [GitHub Education](https://education.github.com/) para tener Copilot Student; mientras tanto sirve Copilot Free.
 
 Las herramientas son de libre elección. Si tu equipo prefiere otro editor u otro agente, las reglas de `AGENTS.md` y las skills siguen sirviendo.
 
@@ -13,7 +24,7 @@ Las herramientas son de libre elección. Si tu equipo prefiere otro editor u otr
 
 1. En el repositorio plantilla, botón **Use this template** → **Create a new repository**. Que sea **público**. (También pueden hacer un fork.)
 2. **Settings → Collaborators** → invita al resto del equipo.
-3. Crea el tablero: pestaña **Projects** → **New project** → plantilla **Board**. Columnas: *Por hacer*, *En progreso*, *En revisión* y *Hecho*. Vincúlalo al repo.
+3. Crea las etiquetas (`setup/crear-etiquetas`) y el tablero, siguiendo [ISSUES-Y-TABLERO.md](ISSUES-Y-TABLERO.md).
 4. Recomendado: **Settings → Branches** → protege `main` para exigir pull request con una aprobación.
 
 ## 3. Clona y configura Git (todas)
@@ -38,6 +49,8 @@ powershell -ExecutionPolicy Bypass -File setup\configurar-git.ps1
 Te pide tu nombre y tu correo de GitHub, y deja `main` como rama por defecto.
 
 ## 4. Enciende el agente
+
+El detalle del MCP (y del token para OpenCode) está en [INSTALACION.md](INSTALACION.md#conectar-el-agente-con-github-mcp).
 
 **Con GitHub Copilot en VS Code**
 
@@ -66,7 +79,7 @@ Los dos leen las mismas reglas (`AGENTS.md`) y las mismas skills (`.agents/skill
 6. Una compañera revisa (con ayuda de **QA**) y hace merge.
 7. **Desplegador:** *"Publica la demo."*
 
-El detalle de cada fase está en [FLUJO-SDD.md](FLUJO-SDD.md).
+El detalle de cada fase está en [FLUJO-SDD.md](FLUJO-SDD.md); cómo escribir la spec, en [USAR-SPEC.md](USAR-SPEC.md); issues y tablero, en [ISSUES-Y-TABLERO.md](ISSUES-Y-TABLERO.md); y un ejemplo completo en [EJEMPLO-TAREA.md](EJEMPLO-TAREA.md).
 
 ## Si algo sale mal
 
