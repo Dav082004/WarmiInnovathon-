@@ -26,8 +26,11 @@ Las herramientas son de libre elección. Si tu equipo prefiere otro editor u otr
 
 1. En el repositorio plantilla, botón **Use this template** → **Create a new repository**. Que sea **público**. (También pueden hacer un fork.)
 2. **Settings → Collaborators** → invita al resto del equipo.
-3. Crea las etiquetas (`setup/crear-etiquetas`) y el tablero, siguiendo [ISSUES-Y-TABLERO.md](ISSUES-Y-TABLERO.md).
-4. Recomendado: **Settings → Branches** → protege `main` para exigir pull request con una aprobación.
+3. Pon el README del equipo en lugar del README del kit: `git mv -f docs/PLANTILLA-README.md README.md`, commit y push. Lo irán completando con lo que salga de la spec. Un ejemplo terminado: [el README de la demo](https://github.com/Dav082004/WarmiInnovatho-Demo#readme).
+4. Crea las etiquetas (`setup/crear-etiquetas`) y el tablero, siguiendo [ISSUES-Y-TABLERO.md](ISSUES-Y-TABLERO.md).
+5. Recomendado: **Settings → Branches** → protege `main` para exigir pull request con una aprobación.
+
+Cada paso, con su documentación oficial, está en la [Parte 2 del README del kit](https://github.com/Dav082004/WarmiInnovathon-#parte-2--crea-el-repo-del-equipo-una-persona).
 
 ## 3. Clona y configura Git (todas)
 

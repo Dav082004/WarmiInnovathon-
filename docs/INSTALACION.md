@@ -53,14 +53,16 @@ opencode --version
 
 ## Camino 2: a mano
 
-| Herramienta | Dónde |
-| --- | --- |
-| Git | https://git-scm.com/downloads |
-| VS Code | https://code.visualstudio.com |
-| Node.js (LTS) | https://nodejs.org |
-| GitHub CLI | https://cli.github.com |
-| Extensiones de VS Code | Busca **GitHub Copilot**, **GitHub Copilot Chat** y **GitHub Pull Requests** en el panel de extensiones, o deja que VS Code las sugiera al abrir este repo |
-| OpenCode | `npm install -g @opencode/cli` (versión 2). En Windows también puedes bajar el `.zip` desde https://opencode.ai. Si ya tienes la versión 1 (`opencode-ai`), también sirve con este repo |
+El paso a paso de cada herramienta, con su documentación oficial, está en la [Parte 1 del README del kit](https://github.com/Dav082004/WarmiInnovathon-#parte-1--configura-tu-computadora-paso-a-paso). Resumen:
+
+| Herramienta | Dónde se descarga | Documentación oficial |
+| --- | --- | --- |
+| Git | https://git-scm.com/downloads | [Pro Git en español](https://git-scm.com/book/es/v2) |
+| VS Code | https://code.visualstudio.com/download | [Instalar VS Code](https://code.visualstudio.com/docs/setup/setup-overview) |
+| Node.js (LTS) | https://nodejs.org/es/download | [Node.js](https://nodejs.org/es/download) |
+| GitHub CLI | https://cli.github.com | [Manual de `gh`](https://cli.github.com/manual/) |
+| Extensiones de VS Code | Busca **GitHub Copilot**, **GitHub Copilot Chat** y **GitHub Pull Requests** en el panel de extensiones, o deja que VS Code las sugiera al abrir este repo | [Copilot en VS Code](https://code.visualstudio.com/docs/copilot/setup) |
+| OpenCode | `npm install -g @opencode/cli` (versión 2). En Windows también puedes bajar el `.zip` desde https://opencode.ai. Si ya tienes la versión 1 (`opencode-ai`), también sirve con este repo | [Documentación de OpenCode](https://opencode.ai/docs/) |
 
 ## Conectar el agente con GitHub (MCP)
 

@@ -2,6 +2,8 @@
 
 Este ejemplo recorre **una tarea completa**, desde el requisito de la spec hasta la tarjeta en *Hecho*. Usa la idea de ejemplo de la demo ([Warmi Mentoras](https://github.com/Dav082004/WarmiInnovatho-Demo), un directorio de mentoras en tecnología). Tu idea será distinta; el recorrido es el mismo.
 
+> ¿Quieres ver una **funcionalidad entera** dividida por áreas, con olas en paralelo y reparto entre 4 personas? Mira [`specs/002-mi-match/tasks.md`](https://github.com/Dav082004/WarmiInnovatho-Demo/blob/main/specs/002-mi-match/tasks.md) en la demo.
+
 ## 1. De dónde sale: el requisito en la spec
 
 En `specs/001-directorio-mentoras/spec.md`:
