@@ -82,7 +82,7 @@ Reglas completas: [CONTRIBUTING.md](CONTRIBUTING.md) para personas y [AGENTS.md]
 | `docs/FLUJO-SDD.md` | El flujo completo y qué decirle al agente en cada fase |
 | `docs/constitution.md` | Los principios del proyecto |
 | `specs/000-plantilla/` | Plantillas de spec, plan y tareas |
-| `setup/` | Scripts para instalar las herramientas, configurar Git y crear las etiquetas |
+| `setup/` | Scripts para instalar las herramientas, configurar Git, verificar que todo está listo, y crear las etiquetas y el tablero |
 | `.github/agents/` y `.opencode/agents/` | Cinco agentes con rol fijo: Especificador, Planificador, Desarrollador, QA y Desplegador |
 | `.agents/skills/` | Doce skills en español para el flujo |
 | `.github/ISSUE_TEMPLATE/` y plantilla de PR | Issues y PRs ordenados |

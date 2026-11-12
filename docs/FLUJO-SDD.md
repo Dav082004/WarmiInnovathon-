@@ -27,7 +27,7 @@ Guías detalladas: [USAR-SPEC.md](USAR-SPEC.md) (fases 0 a 1b), [ISSUES-Y-TABLER
 
 ## Qué decirle al agente en cada fase
 
-Elige el agente en el selector del chat (Copilot en modo Agent, o `Tab` en OpenCode) y escribe:
+Elige el agente en el selector del chat (Copilot en modo Agent, o `/agents` en OpenCode) y escribe:
 
 | Fase | Agente | Mensaje |
 | --- | --- | --- |

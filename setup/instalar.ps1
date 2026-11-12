@@ -1,4 +1,4 @@
-# Instala las herramientas del taller en Windows 10/11 con winget.
+﻿# Instala las herramientas del taller en Windows 10/11 con winget.
 # Uso, desde PowerShell en la carpeta del repo:
 #   powershell -ExecutionPolicy Bypass -File setup\instalar.ps1
 # Es seguro correrlo más de una vez: omite lo que ya está instalado.
@@ -36,7 +36,7 @@ if (Get-Command opencode -ErrorAction SilentlyContinue) {
     Write-Host "[ya instalado] OpenCode"
 } elseif (Get-Command npm -ErrorAction SilentlyContinue) {
     Write-Host "[instalando]   OpenCode..."
-    npm install -g opencode-ai
+    npm install -g "@opencode/cli"
 } else {
     Write-Host "[pendiente]    OpenCode: cierra y abre PowerShell, y corre este script otra vez."
 }
@@ -63,4 +63,5 @@ Write-Host "Siguientes pasos:"
 Write-Host "  1. powershell -ExecutionPolicy Bypass -File setup\configurar-git.ps1"
 Write-Host "  2. gh auth login          (inicia sesion en GitHub)"
 Write-Host "  3. Abre VS Code e inicia sesion con tu cuenta de GitHub (icono de cuenta, abajo a la izquierda)"
-Write-Host "  4. Sigue docs\GUIA-INICIO.md"
+Write-Host "  4. powershell -ExecutionPolicy Bypass -File setup\verificar.ps1   (revisa que todo quedo listo)"
+Write-Host "  5. Sigue docs\GUIA-INICIO.md"

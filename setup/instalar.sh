@@ -39,7 +39,7 @@ if tiene opencode; then
   echo "[ya instalado] OpenCode"
 elif tiene npm; then
   echo "[instalando]   OpenCode..."
-  npm install -g opencode-ai || echo "  Si falla por permisos, usa: sudo npm install -g opencode-ai"
+  npm install -g @opencode/cli || echo "  Si falla por permisos, usa: sudo npm install -g @opencode/cli"
 else
   echo "[pendiente]    OpenCode: abre una terminal nueva y corre este script otra vez."
 fi

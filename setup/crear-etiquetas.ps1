@@ -1,4 +1,4 @@
-# Crea las etiquetas del equipo en el repo (necesita GitHub CLI con sesión iniciada: gh auth login).
+﻿# Crea las etiquetas del equipo en el repo (necesita GitHub CLI con sesión iniciada: gh auth login).
 # Uso, dentro de la carpeta del repo: powershell -ExecutionPolicy Bypass -File setup\crear-etiquetas.ps1
 if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
     Write-Host "Falta GitHub CLI (gh). Corre primero setup\instalar.ps1"

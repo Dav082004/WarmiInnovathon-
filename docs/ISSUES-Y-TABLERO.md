@@ -41,7 +41,7 @@ Crea: `tarea`, `bug`, `bloqueada` y una por área: `área: diseño`, `área: fro
    - **Por persona** (*Table*), agrupada por *Assignees*: para ver cuánto lleva cada una.
    - **Por área** (*Table*), agrupada por *Área*.
 
-> **Con GitHub CLI (opcional).** Los pasos 2 y 4 también se pueden hacer con comandos. Una vez: `gh auth refresh -s project`. Luego `gh project create --owner @me --title "Mi proyecto"` y `gh project field-create <número> --owner @me --name "Área" --data-type SINGLE_SELECT --single-select-options "Diseño,Frontend,Backend y datos,Pruebas,Despliegue,Docs y pitch"`. Si un comando falla, hazlo desde la web.
+> **Con un solo comando (opcional).** `bash setup/crear-tablero.sh "Nombre del proyecto"` (Mac o Linux) o `powershell -ExecutionPolicy Bypass -File setup\crear-tablero.ps1 "Nombre del proyecto"` (Windows) crea el tablero, le agrega los campos **Área** y **RF** y lo enlaza con el repo. Antes, una sola vez: `gh auth refresh -s project`. Las columnas y la vista de tablero se ajustan desde la web, como dice este paso. Si el script falla, haz todo desde la web.
 
 ## 3. Convierte las tareas en issues
 

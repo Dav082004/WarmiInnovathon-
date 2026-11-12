@@ -14,6 +14,8 @@ bash setup/instalar.sh
 powershell -ExecutionPolicy Bypass -File setup\instalar.ps1
 ```
 
+Cuando termine, corre `bash setup/verificar.sh` (o `powershell -ExecutionPolicy Bypass -File setup\verificar.ps1` en Windows): revisa cada herramienta y te dice qué falta y cómo resolverlo.
+
 Los scripts viven en el repo. Si todavía no tienes Git para clonarlo, en GitHub usa **Code → Download ZIP**, descomprime y corre el script desde esa carpeta.
 
 Qué instala, instalación a mano y cómo resolver problemas: [INSTALACION.md](INSTALACION.md). Si eres estudiante, verifica [GitHub Education](https://education.github.com/) para tener Copilot Student; mientras tanto sirve Copilot Free.
@@ -63,9 +65,9 @@ El detalle del MCP (y del token para OpenCode) está en [INSTALACION.md](INSTALA
 
 1. Crea un token en GitHub: **Settings → Developer settings → Personal access tokens** (permisos de repo y project).
 2. Guárdalo en la variable de entorno `GITHUB_TOKEN`. Nunca lo escribas en un archivo del repo.
-3. Ejecuta `opencode` en la carpeta del repo y cambia de agente con `Tab`.
+3. Ejecuta `opencode` en la carpeta del repo y elige el agente con `/agents`.
 
-Los dos leen las mismas reglas (`AGENTS.md`) y las mismas skills (`.agents/skills/`). Si tu agente no detecta las skills, copia esa carpeta a `.github/skills/` (Copilot) o `.opencode/skills/` (OpenCode).
+Los dos leen las mismas reglas (`AGENTS.md`) y las mismas skills (`.agents/skills/`). Copilot y OpenCode leen esa carpeta sin configurar nada.
 
 **Sin MCP** todo se puede hacer igual desde la web de GitHub.
 

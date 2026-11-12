@@ -60,7 +60,7 @@ opencode --version
 | Node.js (LTS) | https://nodejs.org |
 | GitHub CLI | https://cli.github.com |
 | Extensiones de VS Code | Busca **GitHub Copilot**, **GitHub Copilot Chat** y **GitHub Pull Requests** en el panel de extensiones, o deja que VS Code las sugiera al abrir este repo |
-| OpenCode | `npm install -g opencode-ai` (o mira https://opencode.ai) |
+| OpenCode | `npm install -g @opencode/cli` (versión 2). En Windows también puedes bajar el `.zip` desde https://opencode.ai. Si ya tienes la versión 1 (`opencode-ai`), también sirve con este repo |
 
 ## Conectar el agente con GitHub (MCP)
 
@@ -69,7 +69,7 @@ El MCP es lo que permite que el agente cree issues, mueva tarjetas del tablero y
 **Con Copilot en VS Code**
 
 1. Abre la carpeta del repo en VS Code.
-2. Abre `.vscode/mcp.json` y pulsa **Start** sobre el servidor `github`. Autoriza con tu cuenta.
+2. Abre `.vscode/mcp.json` y pulsa **Start** sobre el servidor `github`. Autoriza con tu cuenta. Si no ves **Start**, abre la paleta de comandos (`Ctrl+Shift+P`) y busca **MCP: List Servers**.
 3. En el chat de Copilot cambia el modo a **Agent**. Pulsa el icono de herramientas y confirma que aparecen las de GitHub.
 4. Prueba: *"¿Qué issues abiertos hay en este repo?"*
 
@@ -79,7 +79,9 @@ El MCP es lo que permite que el agente cree issues, mueva tarjetas del tablero y
 2. Guárdalo en una variable de entorno, nunca en un archivo del repo:
    - Windows (PowerShell): `[Environment]::SetEnvironmentVariable("GITHUB_TOKEN", "pega-tu-token", "User")` y abre una terminal nueva.
    - Mac o Linux: agrega `export GITHUB_TOKEN=pega-tu-token` a `~/.zshrc` o `~/.bashrc`.
-3. En la carpeta del repo corre `opencode`. Cambia de agente con `Tab`.
+3. En la carpeta del repo corre `opencode`. La primera vez escribe `/connect` para elegir tu proveedor de modelos (por ejemplo **GitHub Copilot**, que entra con tu cuenta de GitHub).
+4. Elige el agente con `/agents` (o `Shift+Tab` para pasar al siguiente; en la versión 1 es `Tab`).
+5. Revisa que el MCP conectó: `opencode mcp list` en la terminal. Debe aparecer `github`.
 
 ## Si algo falla
 
@@ -87,9 +89,12 @@ El MCP es lo que permite que el agente cree issues, mueva tarjetas del tablero y
 | --- | --- |
 | `winget` no existe | Actualiza **Instalador de aplicación** en Microsoft Store, o instala a mano |
 | `git`, `node` o `opencode` "no se reconoce" | Cierra y abre la terminal; el PATH se actualiza en ventanas nuevas |
-| `npm install -g` da error de permisos | Mac o Linux: `sudo npm install -g opencode-ai` |
+| `npm install -g` da error de permisos | Mac o Linux: `sudo npm install -g @opencode/cli` |
+| No sé qué me falta | Corre `setup/verificar.sh` o `setup\verificar.ps1`: revisa cada herramienta y te dice el siguiente paso |
+| Las etiquetas salen con letras raras (`Ã¡rea`) | Vuelve a descargar el repo y corre el script otra vez; los `.ps1` deben conservar su codificación UTF-8 con BOM |
+| OpenCode no conecta con GitHub | Revisa que `GITHUB_TOKEN` exista en una terminal **nueva** y que el token tenga permisos de `repo` y `project` |
 | VS Code no muestra las herramientas de GitHub | Revisa que `.vscode/mcp.json` esté en la carpeta abierta y pulsa **Start** |
 | El MCP no ve el tablero de Projects | Cierra sesión y vuelve a entrar para aceptar el permiso de proyectos, o usa el tablero desde la web |
 | Copilot dice que no hay cuota | Pasa a OpenCode, o a Copilot Free |
 
-> Los scripts de instalación se escribieron siguiendo la documentación de cada herramienta, pero cambian con el tiempo. Si un comando falla, instala esa herramienta a mano y sigue.
+> Los comandos de `gh`, la configuración del MCP y la de OpenCode se revisaron contra la documentación oficial el 12 de noviembre de 2026. Las herramientas cambian con el tiempo: si un comando falla, instala esa herramienta a mano y sigue.
