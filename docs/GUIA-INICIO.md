@@ -71,6 +71,8 @@ Los dos leen las mismas reglas (`AGENTS.md`) y las mismas skills (`.agents/skill
 
 **Sin MCP** todo se puede hacer igual desde la web de GitHub.
 
+> El MCP trabaja con lo que está en GitHub (issues, PRs, tablero). Lo que pasa en tu computadora (guardar cambios, cambiar de rama, traer lo nuevo) sigue siendo Git. Conoce los comandos y qué hace cada uno en [COMANDOS-GIT.md](COMANDOS-GIT.md).
+
 ## 5. Tu primera vuelta completa
 
 1. **Especificador:** *"Queremos construir [idea]. Entrevístanos y escribe la spec."* → `specs/001-.../spec.md`, a `main` por PR.

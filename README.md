@@ -76,6 +76,7 @@ Reglas completas: [CONTRIBUTING.md](CONTRIBUTING.md) para personas y [AGENTS.md]
 | --- | --- |
 | `docs/GUIA-INICIO.md` | Los primeros 15 minutos, paso a paso |
 | `docs/INSTALACION.md` y `setup/instalar.*` | Instalar Git, VS Code, Node, GitHub CLI, OpenCode y Copilot, con scripts para Windows, Mac y Linux |
+| `docs/COMANDOS-GIT.md` | Los comandos de Git que sí o sí hay que conocer, qué hace cada uno y qué hacer cuando algo sale mal (conflictos, push rechazado, commit equivocado…) |
 | `docs/USAR-SPEC.md` | Cómo escribir y usar la spec, paso a paso |
 | `docs/ISSUES-Y-TABLERO.md` | Issues, etiquetas por área y tablero de GitHub Projects, paso a paso |
 | `docs/EJEMPLO-TAREA.md` | Una tarea de ejemplo dividida por áreas, de la spec a *Hecho* |

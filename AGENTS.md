@@ -41,6 +41,8 @@ docs/constitution.md → specs/NNN-nombre/spec.md → plan.md → tasks.md → i
 - Antes de crear, editar o cerrar algo en GitHub, **di exactamente qué vas a hacer** y espera confirmación.
 - Los issues nuevos van al tablero del equipo en **Por hacer**, con su etiqueta de **área** (`área: diseño`, `área: frontend`, `área: backend-datos`, `área: pruebas`, `área: despliegue` o `área: docs-pitch`). Un issue es de una sola área: si una tarea toca varias, divídela en un sub-issue por área. Al empezar uno pasa a **En progreso**; con PR abierto, a **En revisión**; fusionado, a **Hecho**.
 - Si dos ramas tocan los mismos archivos, avisa del posible conflicto.
+- **Comandos de Git que borran o reescriben trabajo** (`push --force`, `reset --hard`, `clean -fd`, `restore .`, `rebase`): nunca los ejecutes sin explicar antes qué hacen y esperar confirmación. Si algo sale mal, usa los pasos de `docs/COMANDOS-GIT.md`.
+- Cuando ejecutes un comando de Git, di en una frase qué hace: las personas del equipo están aprendiendo.
 
 ## Código
 
