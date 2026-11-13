@@ -3,6 +3,8 @@
 > Plantilla de repositorio para que cada equipo construya su solución al reto de la **ONG Ubuntu** con **Spec-Driven Development (SDD)**, **agentes de IA** y **GitHub**, en cuatro días y sin perder el control de lo que construye.
 > Entrega: **domingo 15 de noviembre, 11:59 p. m.** · Final: **lunes 16**.
 
+> **¿Poco tiempo? Si solo lees una cosa, lee [docs/GUIA-INICIO.md](docs/GUIA-INICIO.md)** (15 minutos). Este README es la referencia completa: vuelve a él cuando un paso te falle.
+
 ## Qué es esto
 
 Es el punto de partida del repo de tu equipo. No trae una solución: trae **la forma de trabajar** para llegar a una.
@@ -164,6 +166,42 @@ gh auth login
 3. En el chat, modo **Agent**, pulsa el icono de herramientas y confirma que aparecen las de GitHub.
 4. Prueba: *"¿Qué issues abiertos hay en este repo?"*
 
+**Además, regístralo en la configuración global de Copilot** (una vez por computadora). Así el MCP de GitHub queda disponible en Copilot fuera de este repo, también en la terminal.
+
+> **¿Cuál archivo usa cada uno?** `.vscode/mcp.json` viene en el repo y lo usa el **chat de Copilot en VS Code** cuando abres esta carpeta. `~/.copilot/mcp-config.json` es tuyo y lo usa **Copilot en la terminal (Copilot CLI)** en cualquier carpeta. Tener los dos no choca: cada herramienta lee el suyo.
+
+1. Inicia sesión en la PC con **tu cuenta principal de Windows** (la que usas siempre, no una cuenta de invitado ni otra persona): el archivo vive en tu carpeta de usuario.
+2. Crea o abre el archivo `mcp-config.json`:
+
+   ```powershell
+   # Windows: queda en C:\Users\<tu-usuario>\.copilot\mcp-config.json
+   New-Item -ItemType Directory -Force "$env:USERPROFILE\.copilot" | Out-Null
+   notepad "$env:USERPROFILE\.copilot\mcp-config.json"
+   ```
+
+   ```bash
+   # Mac o Linux: queda en ~/.copilot/mcp-config.json
+   mkdir -p ~/.copilot && code ~/.copilot/mcp-config.json
+   ```
+
+3. Pega esto y guarda. Si el archivo ya tenía otros servidores, no los borres: agrega solo el bloque `github` dentro de `mcpServers`.
+
+   ```json
+   {
+     "mcpServers": {
+       "github": {
+         "type": "http",
+         "url": "https://api.githubcopilot.com/mcp/",
+         "tools": ["*"]
+       }
+     }
+   }
+   ```
+
+4. Después, ve a configurarlo: cierra y vuelve a abrir Copilot, revisa que el servidor `github` aparezca en la lista de servidores MCP y autoriza con tu cuenta de GitHub cuando te lo pida.
+
+> Este archivo es **tuyo, no del repo**: no lo copies dentro del proyecto ni le pongas tokens.
+
 El agente **te pedirá confirmación** antes de cambiar algo en GitHub. Lee qué va a hacer antes de aceptar.
 
 > 📖 [Servidores MCP en VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) · [Servidor MCP de GitHub](https://github.com/github/github-mcp-server)
@@ -174,9 +212,10 @@ El agente **te pedirá confirmación** antes de cambiar algo en GitHub. Lee qué
 
 1. Instálalo: `npm install -g @opencode/cli` (en Mac o Linux, si da error de permisos, antepón `sudo`).
 2. Crea un **token personal** en GitHub (**Settings → Developer settings → Personal access tokens**) con permisos de `repo` y `project`.
-3. Guárdalo en la variable de entorno `GITHUB_TOKEN`, **nunca en un archivo del repo**:
-   - Windows: `[Environment]::SetEnvironmentVariable("GITHUB_TOKEN", "pega-tu-token", "User")` y abre una terminal nueva.
-   - Mac o Linux: agrega `export GITHUB_TOKEN=pega-tu-token` a `~/.zshrc` o `~/.bashrc`.
+3. Guárdalo en la variable de entorno `GITHUB_MCP_TOKEN`, **nunca en un archivo del repo**:
+   - Windows: `[Environment]::SetEnvironmentVariable("GITHUB_MCP_TOKEN", "pega-tu-token", "User")` y abre una terminal nueva.
+   - Mac o Linux: agrega `export GITHUB_MCP_TOKEN=pega-tu-token` a `~/.zshrc` o `~/.bashrc`.
+   - No uses el nombre `GITHUB_TOKEN`: OpenCode también lo usa para GitHub Copilot, y Copilot rechaza los tokens personales.
 4. En la carpeta del repo: `opencode`. La primera vez, `/connect` para elegir el proveedor de modelos (por ejemplo GitHub Copilot). Elige el agente con `/agents`.
 5. Comprueba el MCP con `opencode mcp list`: debe aparecer `github`.
 
@@ -256,6 +295,7 @@ Constitución → Spec → Clarificación → Plan → Tareas e issues → Desar
 
 | Fase | Agente | Qué le dices | Queda en |
 | --- | --- | --- | --- |
+| Reto | **El equipo** | Pegan el texto oficial del reto en `docs/RETO.md` | `docs/RETO.md` |
 | Requisitos | Especificador | *"Queremos construir [idea]. Entrevístanos y escribe la spec."* | `specs/001-.../spec.md` |
 | Clarificación | QA | *"Revisa la spec 001 como QA. Solo detecta, no resuelvas."* | la spec corregida |
 | Plan y tareas | Planificador | *"La spec 001 está aprobada. Escribe el plan y las tareas, y crea los issues por área."* | `plan.md`, `tasks.md`, tablero |
@@ -270,6 +310,7 @@ Todo el detalle: [docs/FLUJO-SDD.md](docs/FLUJO-SDD.md) · Primeros 15 minutos: 
 
 | Carpeta o archivo | Para qué |
 | --- | --- |
+| [`docs/RETO.md`](docs/RETO.md) | El reto de la ONG: complétenlo primero, el agente lo lee antes de escribir la spec |
 | [`docs/PLANTILLA-README.md`](docs/PLANTILLA-README.md) | El README de tu equipo, listo para completar |
 | [`docs/GUIA-INICIO.md`](docs/GUIA-INICIO.md) | Los primeros 15 minutos, paso a paso |
 | [`docs/INSTALACION.md`](docs/INSTALACION.md) y `setup/instalar.*` | Instalación con script y solución de problemas |

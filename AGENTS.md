@@ -6,6 +6,7 @@ Las personas del equipo tienen las mismas reglas, explicadas paso a paso, en [`C
 ## Proyecto
 
 - Equipo de la **Warmi Innovathon 2026**. Entrega: **domingo 15 de noviembre, 11:59 p. m.** Final: lunes 16.
+- Reto: [`docs/RETO.md`](docs/RETO.md). Léelo antes de escribir o revisar una spec: toda la solución responde a él.
 - Qué es: [completar en 2 o 3 frases cuando exista la spec]
 - Stack: [completar, lo decide el equipo en `plan.md`]
 
